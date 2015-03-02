@@ -11,7 +11,7 @@ while True:
         while(result=='free'):
             result=ser.readline().split()[0]
         print("Equipment now unavailable")
-        requests.get("http://localhost:3000/update?id=0&status=true")
+        requests.get("http://doyoulift.meteor.com/update?id=0&status=true")
         print("done")
         isfree=False
     else:
@@ -19,7 +19,7 @@ while True:
         while(result=='used'):
             result=ser.readline().split()[0]
         print("Equipment now available")
-        requests.get("http://localhost:3000/update?id=0&status=false")
+        requests.get("http://doyoulift.meteor.com/update?id=0&status=false")
         print('done')
         isfree=True
 
