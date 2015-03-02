@@ -42,7 +42,9 @@ if (Meteor.isServer) {
       Equipment.update({id:0}, {$set: {occupied: status}});
       console.log(sid);
       console.log(status);
-    }
+    },
+    path:'/update'
   });
 });
+
 }
