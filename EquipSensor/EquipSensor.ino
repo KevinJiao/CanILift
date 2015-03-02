@@ -13,9 +13,9 @@ void setup(){
 void loop(){
     boolean occupied = check_occupied(10);
     if(occupied){
-      Serial.println("Equipment is in use");
+      Serial.println("used");
     } else{
-      Serial.println("Equipment is free");
+      Serial.println("free");
     }
     delay(1000);
 
