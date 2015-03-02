@@ -11,14 +11,15 @@ while True:
         while(result=='free'):
             result=ser.readline().split()[0]
         print("Equipment now unavailable")
-        urllib2.urlopen("http://localhost:3000/update?id=0&status=true")
         requests.get("http://localhost:3000/update?id=0&status=true")
+        print("done")
         isfree=False
     else:
         result = ser.readline().split()[0]
         while(result=='used'):
             result=ser.readline().split()[0]
         print("Equipment now available")
-        urllib2.urlopen("http://localhost:3000/update?id=0&status=false")
+        requests.get("http://localhost:3000/update?id=0&status=false")
+        print('done')
         isfree=True
 

@@ -31,6 +31,7 @@ if (Meteor.isClient) {
 
 }
 if (Meteor.isServer) {
+  
   Router.map(function () {
   this.route('update', {
     where: 'server',
@@ -42,8 +43,8 @@ if (Meteor.isServer) {
       Equipment.update({id:0}, {$set: {occupied: status}});
       console.log(sid);
       console.log(status);
+      this.next();
     },
-    path:'/update'
   });
 });
 
