@@ -36,15 +36,13 @@ if (Meteor.isServer) {
     where: 'server',
     action: function () {
       var sid = this.request.query.id;
-      var status = this.request.query.status;
+      var status = this.request.query.status==='true';
       // console.log(Equipment.find({id:sid}));
       // Equipment.update({id:id}, {$set: {occupied: status}});
-      Equipment.update({id:sid}, {$set: {occupied: status}});
+      Equipment.update({id:0}, {$set: {occupied: status}});
       console.log(sid);
       console.log(status);
-      //console.log(Equipment.update({id:sid}).status);
-    },
-    path:'/'
+    }
   });
 });
 }

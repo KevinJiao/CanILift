@@ -1,4 +1,3 @@
-
 <head>
   <title>DoYouLift</title>
 </head>
@@ -8,20 +7,15 @@
   {{#each getequipment}}
     {{>item}}
   {{/each}}
-
- <button name='clicky' type="button">Click Me!</button> 
-
 </body>
 
 <template name = "item">
 <img src = "bench.png"/>
     {{#if occupied}}
     <div class = "red"></div>
-    <span> This is occupied</span>
 
     {{else}}
     <div class = "green"></div>
-    <span> This is not occupied</span>    
     {{/if}}
 </template>
 
