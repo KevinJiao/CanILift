@@ -19,3 +19,21 @@ body {
 h1 {
   text-align:center;
 }
+
+.red{
+  position:absolute;
+  left:0;
+  top:50px;
+  width:550px;
+  height:450px;
+  background: rgba(255,0,0, 0.2);
+}
+
+.green{
+  position:absolute;
+  left:0;
+  top:50px;
+  width:550px;
+  height:450px;
+  background: rgba(0,255,0, 0.2);
+}

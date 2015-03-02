@@ -1,23 +1,30 @@
+
 <head>
   <title>DoYouLift</title>
 </head>
 
 <body>
   <h1>Gym Equipment Status</h1>
-
-  <ul>
   {{#each getequipment}}
     {{>item}}
   {{/each}}
-  </ul>
+
+ <button name='clicky' type="button">Click Me!</button> 
+
 </body>
 
 <template name = "item">
-    <li class = "unit">
-        <span> {{name}}</span>
-        <img src = "bench.png"/>
-        {{#if occupied}}
-            <span> This is occupied</span>
-        {{/if}}
-    </li>
+<img src = "bench.png"/>
+    {{#if occupied}}
+    <div class = "red"></div>
+    <span> This is occupied</span>
+
+    {{else}}
+    <div class = "green"></div>
+    <span> This is not occupied</span>    
+    {{/if}}
+</template>
+
+<template name = 'switchbutton'>
+ <button type="button">Click Me!</button> 
 </template>
